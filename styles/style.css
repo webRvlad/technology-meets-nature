@@ -18,6 +18,7 @@ html {
 }
 
 body {
+  min-width: 1440px;
   height: 100%;
   margin: 0;
   padding: 0 20px;
@@ -40,6 +41,7 @@ a {
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr auto;
+
   max-width: 1400px;
   min-height: 100%;
   margin: 0 auto;
