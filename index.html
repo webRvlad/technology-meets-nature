@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology meets nature</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link" aria-current="page">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">About us</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Our vision</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Projects</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Contact</a>
+          </li>
+        </ul>
+        <button class="navigation__button button" type="button">Donate</button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <h1 class="hero__title">Technology Meets Nature</h1>
+        <p class="hero__text">At greenmech alliance, we believe in blending innovation with sustainability. We can
+          reimagine a future where
+          machines and nature thrive in garmony</p>
+        <button class="button" type="button">More</button>
+        <ul class="hexagonals">
+          <li class="hexagonals__item hex hex-1"></li>
+          <li class="hexagonals__item hex hex-2"></li>
+          <li class="hexagonals__item hex hex-3"></li>
+          <li class="hexagonals__item hex hex-4"></li>
+          <li class="hexagonals__item hex hex-5"></li>
+          <li class="hexagonals__item hex hex-6"></li>
+          <li class="hexagonals__item hex hex-7"></li>
+          <li class="hexagonals__item hex hex-8"></li>
+        </ul>
+        <ul class="hexagonals hexagonals_white">
+          <li class="hex-white hex-white-1"></li>
+          <li class="hex-white hex-white-2"></li>
+          <li class="hex-white hex-white-3"></li>
+          <li class="hex-white hex-white-4"></li>
+          <li class="hex-white hex-white-5"></li>
+          <li class="hex-white hex-white-6"></li>
+          <li class="hex-white hex-white-7"></li>
+          <li class="hex-white hex-white-8"></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="mission">
+        Our mission is to create eco-friendly robotic solutions that nurture the planet while advancing technology.
+      </div>
+      <div class="stats">
+        <b class="stats__quantity">+14K</b>
+        <p class="stats__text">
+          By joining our network, you'll connect with like-minded individuals, share ideas, and collaborate on project
+        </p>
+        <a class="stats__link" href="#">Join</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hexagons = document.querySelectorAll('.hex');
+
+      hexagons.forEach((hex) => {
+        const randomDelay = Math.random() * 2;
+        hex.style.animationDelay = randomDelay + 's';
+
+        setTimeout(() => {
+          hex.classList.add('show');
+        }, 50);
+      });
+    });
+  </script>
+</body>
+
+</html>
