@@ -75,6 +75,8 @@
         <a class="stats__link" href="#">Join</a>
       </div>
     </footer>
+
+    <video class="video" src="videos/hero.mp4" muted></video>
   </div>
 
   <script>
@@ -88,13 +90,27 @@
 
           setTimeout(() => {
             hex.classList.add('show');
-          }, 10);
+          }, 50);
         });
       }
 
       setTimeout(() => {
         run();
-      }, 1000);
+      }, 500);
+
+      setTimeout(() => {
+        const video = document.querySelector(".video");
+        video.classList.add("visible");
+
+        video.play();
+
+        video.addEventListener('timeupdate', () => {
+          if (video.currentTime >= 5) {
+            video.pause();
+          }
+        });
+
+      }, 3600);
     });
   </script>
 </body>
