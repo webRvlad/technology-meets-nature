@@ -81,14 +81,20 @@
     document.addEventListener('DOMContentLoaded', () => {
       const hexagons = document.querySelectorAll('.hex');
 
-      hexagons.forEach((hex) => {
-        const randomDelay = Math.random() * 2;
-        hex.style.animationDelay = randomDelay + 's';
+      const run = () => {
+        hexagons.forEach((hex) => {
+          const randomDelay = Math.random() * 2;
+          hex.style.animationDelay = randomDelay + 's';
 
-        setTimeout(() => {
-          hex.classList.add('show');
-        }, 50);
-      });
+          setTimeout(() => {
+            hex.classList.add('show');
+          }, 10);
+        });
+      }
+
+      setTimeout(() => {
+        run();
+      }, 700);
     });
   </script>
 </body>
